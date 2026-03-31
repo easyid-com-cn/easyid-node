@@ -8,19 +8,43 @@ Official TypeScript SDK for the EasyID identity verification API.
 npm install easyid
 ```
 
-## Usage
+## Quick Start
 
 ```ts
-import { EasyID } from "easyid";
+import { EasyID, APIError } from "easyid";
 
 const client = new EasyID("ak_xxx", "sk_xxx");
 
-const result = await client.idcard.verify2("张三", "110101199001011234");
-console.log(result.match);
+try {
+  const result = await client.idcard.verify2("张三", "110101199001011234");
+  console.log(result.match);
+} catch (error) {
+  if (error instanceof APIError) {
+    console.log(error.code, error.message, error.requestId);
+  }
+}
 ```
 
-## Notes
+## Supported APIs
 
-- This is a server-side SDK. Do not expose `secret` in browsers or mobile apps.
-- For private deployments, pass `baseURL` in the client options.
-- See `../docs/integration-guide.md` for end-to-end integration and troubleshooting.
+- IDCard: `verify2`, `verify3`, `ocr`
+- Phone: `status`, `verify3`
+- Face: `liveness`, `compare`, `verify`
+- Bank: `verify4`
+- Risk: `score`, `storeFingerprint`
+- Billing: `balance`, `records`
+
+## Configuration
+
+- `baseURL`
+- `timeoutMs`
+- `fetchImpl`
+
+## Security Notice
+
+This is a server-side SDK. Do not expose `secret` in browsers or mobile apps.
+
+## More Docs
+
+- [Integration Guide](/Users/nbt-mingyi/mingyi.wu/easyid/sdk/docs/integration-guide.md)
+- [Publishing Strategy](/Users/nbt-mingyi/mingyi.wu/easyid/sdk/docs/repository-publishing-strategy.md)
