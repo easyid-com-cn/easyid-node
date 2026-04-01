@@ -2,6 +2,16 @@
   "name": "easyid",
   "version": "1.0.0",
   "description": "Official TypeScript SDK for the EasyID identity verification API.",
+  "license": "MIT",
+  "author": "EasyID Team",
+  "homepage": "https://www.easyid.com.cn",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easyid-com-cn/easyid-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/easyid-com-cn/easyid-node/issues"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
