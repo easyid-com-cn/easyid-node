@@ -1,6 +1,6 @@
 {
   "name": "easyid",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Official TypeScript SDK for the EasyID identity verification API.",
   "license": "MIT",
   "author": "EasyID Team",
