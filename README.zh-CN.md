@@ -9,14 +9,14 @@ EasyID 提供身份证核验、手机号核验、人脸识别、银行卡核验�
 ## 安装
 
 ```bash
-npm install easyid
+npm install easyid-node
 ```
 
 也可以使用：
 
 ```bash
-yarn add easyid
-pnpm add easyid
+yarn add easyid-node
+pnpm add easyid-node
 ```
 
 要求：
@@ -26,7 +26,7 @@ pnpm add easyid
 ## 快速开始
 
 ```ts
-import { EasyID, APIError } from "easyid";
+import { EasyID, APIError } from "easyid-node";
 
 const client = new EasyID("ak_xxx", "sk_xxx");
 

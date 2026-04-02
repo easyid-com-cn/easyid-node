@@ -9,13 +9,13 @@ EasyID 易验云 focuses on identity verification and security risk control APIs
 ## Install
 
 ```bash
-npm install easyid
+npm install easyid-node
 ```
 
 ## Quick Start
 
 ```ts
-import { EasyID, APIError } from "easyid";
+import { EasyID, APIError } from "easyid-node";
 
 const client = new EasyID("ak_xxx", "sk_xxx");
 
