@@ -7,7 +7,7 @@ import { RiskService } from "./risk.js";
 import { DEFAULT_BASE_URL, Transport, VERSION } from "./transport.js";
 import type { EasyIDOptions } from "./types.js";
 
-const KEY_ID_RE = /^ak_[0-9a-f]+$/;
+const KEY_ID_RE = /^ak_[0-9a-zA-Z_]+$/;
 
 export class EasyID {
   static readonly version = VERSION;
